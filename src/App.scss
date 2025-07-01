@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+.App{
+    .popup{
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 50px;
+        background: #F296A0;
+        color: #fff;
+        z-index: 10;
+         transition:top 0.4s ease, opacity 0.4s ease;
+        .mySwiper{
+            text-align: center;
+            line-height: 50px;
+        }
+    }
+    .popup.hide {
+        top: -50px;
+        opacity: 0;
+/*         pointer-events: none; */
+    }
+
+    header{
+        display: flex;
+        position: fixed;
+        top: 50px;
+        left:0;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(0,0,0,.3) , rgba(0,0,0,0));
+        justify-content: space-between;
+        padding: 0 30px;
+        align-items: center;
+        height: 70px;
+        z-index: 10;
+        transition: top 0.4s ease, background 0.4s ease;
+        .headerLeft{
+            display: flex;
+            
+            h1{
+                padding-top: 5px;
+                a{
+                   font-size: 20px; 
+                   font-family: "Noto Sans", sans-serif;
+                   font-weight:500;
+                   color:  #fff;
+                   letter-spacing: 5px;
+                }
+            }
+            nav{
+                margin-left: 30px;
+                ul{
+                    display: flex;
+                    height: 70px;
+                    align-items: center;
+                    li{
+                        margin-right: 20px;
+                        a{
+                            position: relative;
+                            color:#fff;
+                            span{
+                                position: absolute;
+                                font-size: 12px;
+                                top: -5px;
+                                color: #f66b67;
+                                font-weight: 700;
+                            }
+                            &.g{
+                                color: green
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .headerRight{
+            .gnb{
+                ul{
+                    display: flex;
+                    li{
+                        margin-left: 20px;
+                        a{ color:#fff; display: inline-block;}
+                        &:nth-child(1) a{
+                            width: 20px;
+                            height: 20px;
+                            background: url(./img/mypage_w.png) no-repeat center;
+                        }
+                        &:nth-child(2) a{
+                            width: 20px;
+                            height: 20px;
+                            background: url(./img/cart_w.png) no-repeat center bottom;
+                        }
+                        &:nth-child(3) a{
+                            width: 20px;
+                            height: 20px;
+                            background: url(./img/like_w.png) no-repeat center bottom;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    header.sticky{
+        top:0;
+        background: #fff;
+        .headerLeft{
+            h1{
+                a{color: #5a514b;}
+            }
+            nav{
+                ul{
+                    li{
+                        a{
+                            color: #877b73;
+                            span{
+                                
+                            }
+                            &.g{
+                                    color: green
+                                }
+                        }
+                    }
+                }
+            }
+        }
+        .headerRight{
+            .gnb{
+                ul{
+                    li{
+                        a{
+                            color: #877b73;
+                        }
+                         &:nth-child(1) a{
+                            width: 20px;
+                            height: 20px;
+                            background: url(./img/mypage_w_g.png) no-repeat center;
+                        }
+                        &:nth-child(2) a{
+                            width: 20px;
+                            height: 20px;
+                            background: url(./img/cart_w_g.png) no-repeat center bottom;
+                        }
+                        &:nth-child(3) a{
+                            width: 20px;
+                            height: 20px;
+                            background: url(./img/like_w_g.png) no-repeat center bottom;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.best{
+    padding-top: 150px;
+}
+.new{
+     padding-top: 150px;
+}
+.section01title{
+    padding: 100px 0;
+    h2{
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 18px;
+        color: #877b73;
+    }
+    p{
+        text-align: center;
+        font-size: 13px;
+        color: #877b73;
+        line-height: 150%;
+    }
+    #sectionTitleSwiper{
+        width: 1440px;
+        margin: 70px auto;
+        position: relative;
+        .pagination{
+            .swipernext{
+                position: absolute;
+                top: 50%;
+                right: -60px;
+                z-index: 10;
+                width: 24px;
+                height: 45px;
+                background:url(./main_icon_pc.png) no-repeat -464px -108px;
+                transform: translateY(-50%);
+            }
+            .swiperprev{
+                 position: absolute;
+                top: 50%;
+                left: -60px;
+                z-index: 10;
+                width: 24px;
+                height: 45px;
+                background:url(./main_icon_pc.png) no-repeat -405px -109px;
+                transform: translateY(-50%);
+            }
+        }
+        .pagination_fraction{
+            position: absolute;
+            top: -40px;
+            z-index: 10;
+            width: 50px;
+            height: 30px;
+            
+        }
+        .sectionTitTxt{
+            color: #877b73;
+            font-size: 13px;
+            padding-top: 10px;
+        }
+    }
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+
+    left: 97%;
+    width: 100%;
+    color: #877B83
+}
+
+.swiper-button-prev, .swiper-button-next{
+    color: #fff;
+    width:20%;
+}
+.ir_so{
+    position: absolute;
+    left: -100%;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.summer{
+    margin: 50px;
+    h2{
+        font-size: 15px;
+        color: #9a9696;
+        text-align: center;
+        margin-bottom:10px;
+        font-weight: 400;
+    }
+    h3{
+        font-size: 23px;
+        color: #333;
+        text-align: center;
+        margin-bottom:10px;
+        font-weight: 400;
+    }
+    .summerLists{
+        width: 1416px;
+        margin: 50px auto;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                width: 20%;
+                
+                 padding: 0 10px;
+                box-sizing: border-box; 
+                margin-bottom: 30px;
+
+                img{
+                    width: 100%
+                }
+                .textbox{
+                    background: #fff;
+                    .priceWrap{
+                        margin: 10px 0;
+                        .sale{
+                            color: #fda8c2;
+                            font-size: 20px;
+                            letter-spacing: -1px;
+                        }
+                        .price{
+                            font-size: 15px;
+                            color: #877b73;
+                            text-decoration: line-through;
+                            margin: 0 10px;
+                        }
+                        .discount{
+                            font-weight: 700;
+                        }
+                    }
+                    .title{
+                        font-size: 15px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                    .description{
+                        font-size: 15px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;  /* 2줄 넘어가면 말줄임 */
+                        -webkit-box-orient: vertical;
+                        color: #877b73;
+                        margin: 10px 0;
+
+                    }
+                    .company{
+                        font-size: 14px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    height: 300px;
+    border-top: 1px solid #c7c7c7;
+
+    .footerTop{
+        height: 200px;
+    }
+    .footerNav{
+        width: 100%;
+        height: 100px;
+        border-top: 1px solid #c7c7c7;
+        padding: 0 50px;
+        box-sizing: border-box;
+        display: flex;
+        .footernav{
+            width: 1410px;
+            margin: 0 auto;
+            ul{
+                display: flex;
+                li{
+                    a{font-weight: 700;}
+                }
+            }
+        }
+    }
+}

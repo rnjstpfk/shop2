@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+.App{
+    .popup{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 50px;
+        background: #F296A0;
+        color: #fff;
+        z-index: 10;
+        .mySwiper{
+            text-align: center;
+            line-height: 50px;
+        }
+    }
+    header{
+        display: flex;
+        position: fixed;
+        top: 50px;
+        left:0;
+        width: 100%;
+        background: #fff;
+        justify-content: space-between;
+        padding: 0 30px;
+        align-items: center;
+        height: 70px;
+        z-index: 10;
+        .headerLeft{
+            display: flex;
+            
+            h1{
+                padding-top: 5px;
+                a{
+                   font-size: 20px; 
+                   font-family: "Noto Sans", sans-serif;
+                   font-weight:500;
+                   color:  #5a514b;
+                   letter-spacing: 5px;
+                }
+            }
+            nav{
+                margin-left: 30px;
+                ul{
+                    display: flex;
+                    height: 70px;
+                    align-items: center;
+                    li{
+                        margin-right: 20px;
+                        a{
+                            position: relative;
+                            color:#877B83;
+                            span{
+                                position: absolute;
+                                font-size: 12px;
+                                top: -5px;
+                                color: #f66b67;
+                                font-weight: 700;
+                            }
+                            &.g{
+                                color: green
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .headerRight{
+            .gnb{
+                ul{
+                    display: flex;
+                    li{
+                        margin-left: 20px;
+                        a{ color:#877B83; display: inline-block;}
+                        &:nth-child(1) a{
+                            width: 20px;
+                            height: 20px;
+                            background: url(./img/mypage_w_g.png) no-repeat center;
+                        }
+                        &:nth-child(2) a{
+                            width: 20px;
+                            height: 20px;
+                            background: url(./img/cart_w_g.png) no-repeat center bottom;
+                        }
+                        &:nth-child(3) a{
+                            width: 20px;
+                            height: 20px;
+                            background: url(./img/like_w_g.png) no-repeat center bottom;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section01title{
+    padding: 100px 0;
+    h2{
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 18px;
+        color: #877b73;
+    }
+    p{
+        text-align: center;
+        font-size: 13px;
+        color: #877b73;
+        line-height: 150%;
+    }
+}
+
+
+
+.swiper-button-prev, .swiper-button-next{
+    color: #fff;
+    width:20%;
+}
