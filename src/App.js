@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState} from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from "swiper/react";
 import data from './data/data';
 import Main from "./pages/Main";
 import Best from './pages/Best';
 import New from './pages/New';
+import Login from './pages/Login'
 import Detail from './pages/Detail';
 import "swiper/css";
 import 'swiper/css/navigation';
 import { Autoplay } from 'swiper/modules';
 import Footer from './components/Footer';
+import Side from './components/Side';
 
 
 import './App.scss';
@@ -71,7 +73,7 @@ function App() {
 							<li><a href="#"></a></li>
 							<li><a href="#"></a></li>
 							<li><a href="#"></a></li>
-							<li><a href="#">로그인</a></li>
+							<li><Link to="/login">로그인</Link></li>
 						</ul>
 					</div>
 				</div>
@@ -81,10 +83,11 @@ function App() {
 				<Route path="/best" element={<Best />} />
 				<Route path="/new" element={<New />} />
 				<Route path="/detail/:id" element={<Detail shopping={shopping} />} />
+				<Route path="/login" element={<Login/>} />
 			</Routes>
 
 			<Footer />
-
+			<Side/>
 		</div>
 	);
 }

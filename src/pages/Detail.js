@@ -36,7 +36,9 @@ const Detail = ({ shopping }) => {
                 <div className="total">총 {discountAmount} 할인</div>
                 <div className="buttonWrap">
                     <div className="like" onClick={handleLike}>
-                        <span className="hart"></span>
+                        <span className="hart">
+                            <img src={process.env.PUBLIC_URL + '/img/icon/like.png'} alt="" />
+                        </span>
                         <span>{likeCount}</span>
                     </div>
                     <div className="cart">장바구니</div>
