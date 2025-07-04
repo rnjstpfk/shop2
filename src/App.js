@@ -6,6 +6,7 @@ import Main from "./pages/Main";
 import Best from './pages/Best';
 import New from './pages/New';
 import Login from './pages/Login'
+import Sign from './pages/Sign'
 import Detail from './pages/Detail';
 import "swiper/css";
 import 'swiper/css/navigation';
@@ -73,7 +74,13 @@ function App() {
 							<li><a href="#"></a></li>
 							<li><a href="#"></a></li>
 							<li><a href="#"></a></li>
-							<li><Link to="/login">로그인</Link></li>
+							<li><Link to="/login">로그인</Link>
+								<ul>
+									<li>
+										<Link to="sign">회원가입</Link>
+									</li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -84,6 +91,7 @@ function App() {
 				<Route path="/new" element={<New />} />
 				<Route path="/detail/:id" element={<Detail shopping={shopping} />} />
 				<Route path="/login" element={<Login/>} />
+				<Route path="/sign" element={<Sign/>} />
 			</Routes>
 
 			<Footer />
