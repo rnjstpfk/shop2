@@ -6,18 +6,27 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Link } from 'react-router-dom';
-import data from '../data/data'; // ← 이거 빠졌었음!
+import data from '../data/data';
 
 const Main = () => {
     const tabList = ['#자체제작', '#바지맛집', '#지금여름🌿'/* , '#하객룩' */];
     const [activeTab, setActiveTab] = useState(tabList[0]);
 
     const tabImages = {
-        '#지금여름🌿': Array.from({ length: 10 }, (_, i) => `/img/summer/summer${String(i + 1).padStart(2, '0')}.gif`),
-        '#바지맛집': Array.from({ length: 8 }, (_, i) => `/img/pants/pants${String(i + 1).padStart(2, '0')}.gif`),
-        '#자체제작': Array.from({ length: 10 }, (_, i) => `/img/self/self${i + 1}.gif`),
-        /* '#하객룩': Array.from({ length: 5 }, (_, i) => `/img/guest/guest${String(i + 1).padStart(2, '0')}.gif`), */
+        '#지금여름🌿': Array.from(
+            { length: 10 },
+            (_, i) => `${process.env.PUBLIC_URL}/img/summer/summer${String(i + 1).padStart(2, '0')}.gif`
+        ),
+        '#바지맛집': Array.from(
+            { length: 8 },
+            (_, i) => `${process.env.PUBLIC_URL}/img/pants/pants${String(i + 1).padStart(2, '0')}.gif`
+        ),
+        '#자체제작': Array.from(
+            { length: 10 },
+            (_, i) => `${process.env.PUBLIC_URL}/img/self/self${i + 1}.gif`
+        ),
     };
+
 
     const [shopping, setShopping] = useState(data); // ← 여기서 선언해야 함!
 

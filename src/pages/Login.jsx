@@ -9,11 +9,11 @@ const Login = () => {
             </div>
 
             <div className="coupon">
-                <img src={process.env.PUBLIC_URL + "img/appcoupon_banner_pc.jpg"} alt="쿠폰" />
+                <img src={`${process.env.PUBLIC_URL}/img/appcoupon_banner_pc.jpg`} alt="쿠폰" />
             </div>
             <div className="kakaoBtn">
-                <img src={process.env.PUBLIC_URL + "img/talk_pc.png"} alt="카카오icon" />
-                <img src={process.env.PUBLIC_URL + "img/kakaolabel6.svg"} alt="카카오" />
+                <img src={`${process.env.PUBLIC_URL}/img/talk_pc.png`} alt="카카오icon" />
+                <img src={`${process.env.PUBLIC_URL}/img/kakaolabel6.svg`} alt="카카오" />
             </div>
             <div className="chnel">
                 <a href="#">아뜨랑스 카카오 채널 추가 시 3,000원 할인 쿠폰 지급♥</a>
@@ -42,10 +42,10 @@ const Login = () => {
                         <p>다른계정으로 <br /> 로그인하기</p>
                         <div className="iconWrap">
                             <div className="naver">
-                                <img src={process.env.PUBLIC_URL + 'img/icon/icon_naver.png'} alt="네이버icon" />
+                                <img src={`${process.env.PUBLIC_URL}/img/icon/icon_naver.png`} alt="네이버icon" />
                             </div>
                             <div className="google">
-                                <img src={process.env.PUBLIC_URL + 'img/icon/icon_google.webp'} alt="구글icon" />
+                                <img src={`${process.env.PUBLIC_URL}/img/icon/icon_google.webp`} alt="구글icon" />
                             </div>
                         </div>
                     </div>
